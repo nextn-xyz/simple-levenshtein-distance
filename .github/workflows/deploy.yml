@@ -27,8 +27,4 @@ jobs:
 
       - name: Publish package
         run: |
-          mvn -P release -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} \
-              deploy
-        env:
-          MVN_CENTRAL_USERNAME: ${{ vars.OSSRH_USERNAME }}
-          MVN_CENTRAL_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+          mvn deploy
