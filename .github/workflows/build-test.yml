@@ -69,6 +69,7 @@ jobs:
         # Disabling shallow clone is recommended for improving relevancy of reporting
         fetch-depth: 0
     - name: SonarCloud Scan
-      uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
+      run:  mvn -B verify sonar:sonar -Dsonar.projectKey=nextn-xyz_simple-levenshtein-distance -Dsonar.organization=nextn-xyz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONARCLOUD_TOKEN
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+
