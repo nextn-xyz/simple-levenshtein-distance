@@ -100,9 +100,8 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -110,15 +109,11 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <signer>bc</signer>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <keyname>4C207BD42D1F791D3CD31F53F039EAC49341922D</keyname>
-                    <gpgArguments>
-                        <argument>--pinentry-mode</argument>
-                        <argument>loopback</argument>
-                    </gpgArguments>
-                </configuration>
             </plugin>
         </plugins>
     </build>
