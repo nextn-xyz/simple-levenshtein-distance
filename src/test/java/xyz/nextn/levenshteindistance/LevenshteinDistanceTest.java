@@ -17,6 +17,7 @@ class LevenshteinDistanceTest {
             "'', 'abc', 3",
             "'abc', '', 3",
             "'', '', 0",
+            "'abc', 'abc', 0",
     })
     void testCalculate(String s1, String s2, int expected) {
         assertEquals(expected, LevenshteinDistance.calculate(s1, s2));
