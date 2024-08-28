@@ -6,7 +6,20 @@
 
     <groupId>xyz.nextn</groupId>
     <artifactId>simple-levenshtein-distance</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>Simple Levenshtein Distance</name>
+    <description>A simple implementation of the Levenshtein distance algorithm</description>
+    <url>https://github.com/nextn-xyz/simple-levenshtein-distance</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
