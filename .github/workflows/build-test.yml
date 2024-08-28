@@ -74,7 +74,7 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
     - name: SonarCloud Scan
-      run:  mvn -B verify sonar:sonar -Dsonar.projectKey=nextn-xyz_simple-levenshtein-distance -Dsonar.organization=nextn-xyz -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONARCLOUD_TOKEN
+      run:  mvn verify sonar:sonar -Dsonar.projectKey=nextn-xyz_simple-levenshtein-distance -Dsonar.organization=nextn-xyz -Dsonar.host.url=https://sonarcloud.io
       env:
-        GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
