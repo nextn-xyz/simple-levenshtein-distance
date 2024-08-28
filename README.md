@@ -17,6 +17,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>xyz.nextn</groupId>
     <artifactId>simple-levenshtein-distance</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
