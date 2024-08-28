@@ -69,3 +69,8 @@ jobs:
 
       - name: Run tests with Maven
         run: mvn test
+
+      - name: Create coverage report and upload to SonarCloud
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=nextn-xyz_simple-levenshtein-distance
