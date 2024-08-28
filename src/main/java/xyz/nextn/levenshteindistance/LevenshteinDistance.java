@@ -1,8 +1,17 @@
 package xyz.nextn.levenshteindistance;
 /**
  * Utility class for calculating the Levenshtein distance between two strings.
+ * <p>
+ * This class cannot be instantiated.
  */
 public class LevenshteinDistance {
+
+    /**
+     * Private constructor to prevent instantiation.
+     */
+    private LevenshteinDistance() {
+        // Prevent instantiation
+    }
 
     /**
      * Calculates the Levenshtein distance between two strings.
