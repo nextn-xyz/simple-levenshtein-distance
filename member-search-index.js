@@ -1,1 +1,1 @@
-memberSearchIndex = [{"p":"xyz.nextn.levenshteindistance","c":"LevenshteinDistance","l":"calculate(String, String)","u":"calculate(java.lang.String,java.lang.String)"},{"p":"xyz.nextn.levenshteindistance","c":"LevenshteinDistance","l":"LevenshteinDistance()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{"p":"xyz.nextn.levenshteindistance","c":"LevenshteinDistance","l":"calculate(String, String)","u":"calculate(java.lang.String,java.lang.String)"}];updateSearchResults();
