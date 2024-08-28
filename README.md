@@ -9,3 +9,16 @@ A simple and efficient Java library for calculating the Levenshtein Distance, th
 - **Easy to Use:** Simple API for quick integration.
 - **Highly Accurate:** Implements the standard Levenshtein distance algorithm.
 - **Open Source:** MIT licensed, so you can freely use and modify it.
+
+## 📦 Installation
+### Maven
+Add the following dependency to your `pom.xml`:
+```xml
+<dependency>
+    <groupId>xyz.nextn</groupId>
+    <artifactId>simple-levenshtein-distance</artifactId>
+</dependency>
+```
+
+## 🛠️ Usage
+Here's how you can calculate the Levenshtein distance between two strings:
