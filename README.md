@@ -22,3 +22,34 @@ Add the following dependency to your `pom.xml`:
 
 ## 🛠️ Usage
 Here's how you can calculate the Levenshtein distance between two strings:
+```java
+package org.example;
+
+import xyz.nextn.levenshteindistance.LevenshteinDistance;
+
+public class Main {
+    public static void main(String[] args) {
+        String h1 = "Hello, World!";
+        String h2 = "Hello, World??";
+        System.out.println(LevenshteinDistance.calculate(h1, h2));
+    }
+}
+```
+### Example Scenarios
+- Spell Checking: Compare a misspelled word with a dictionary.
+- Plagiarism Detection: Measure similarity between documents.
+- Bioinformatics: Compare genetic sequences.
+
+## 🧪 Testing
+We use JUnit for testing. To run the tests:
+```shell
+mvn test
+```
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🌟 Support
+If you find this project helpful, please give it a ⭐ on GitHub!
+If you have any questions or suggestions, feel free to open an issue or submit a pull request.
+
