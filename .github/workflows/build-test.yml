@@ -41,6 +41,8 @@ jobs:
 
       - name: Build with Maven
         run: mvn -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} clean -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar install
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   test:
     runs-on: ubuntu-latest
