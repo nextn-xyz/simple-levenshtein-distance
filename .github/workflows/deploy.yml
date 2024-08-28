@@ -8,22 +8,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Maven Central Repository
+        uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          passphrase: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
           distribution: 'temurin'
+          java-version: '21'
           cache: 'maven'
-          server-id: ossrh
+          server-id: 'maven-central-release'
           server-username: ${{ secrets.OSSRH_USERNAME }}
           server-password: ${{ secrets.OSSRH_TOKEN }}
-          gpg-private-key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-        env:
-          GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
 
       - name: Publish package
         run: |
-          mvn --batch-mode deploy
+          mvn -P release -Dgpg.keyname=${{ secrets.GPG_KEY_NAME }} -Dgpg.passphrase=${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }} \
+              deploy
         env:
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
-          GPG_PASSPHRASE: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+          MVN_CENTRAL_USERNAME: ${{ vars.OSSRH_USERNAME }}
+          MVN_CENTRAL_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
