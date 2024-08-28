@@ -96,6 +96,7 @@
                 <version>0.5.0</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <autoPublish>true</autoPublish>
                     <publishingServerId>central</publishingServerId>
                 </configuration>
             </plugin>
@@ -111,6 +112,11 @@
                         </goals>
                         <configuration>
                             <signer>bc</signer>
+                                <keyname>4C207BD42D1F791D3CD31F53F039EAC49341922D</keyname>
+                                <gpgArguments>
+                                    <argument>--pinentry-mode</argument>
+                                    <argument>loopback</argument>
+                                </gpgArguments>
                         </configuration>
                     </execution>
                 </executions>
