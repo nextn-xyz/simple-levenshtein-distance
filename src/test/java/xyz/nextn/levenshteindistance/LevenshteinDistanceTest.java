@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 class LevenshteinDistanceTest {
 
 
@@ -49,6 +50,7 @@ class LevenshteinDistanceTest {
             "'©', '®', 1",
             "'©', '™', 1",
             "'©', '€', 1",
+            "'©', '??❌', 3",
     })
     void testCalculateUnicode(String s1, String s2, int expected) {
         assertEquals(expected, LevenshteinDistance.calculate(s1, s2));
