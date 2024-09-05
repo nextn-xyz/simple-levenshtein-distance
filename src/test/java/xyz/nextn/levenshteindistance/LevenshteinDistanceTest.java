@@ -6,6 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 class LevenshteinDistanceTest {
 
 
@@ -25,12 +26,14 @@ class LevenshteinDistanceTest {
     void testCalculate(String s1, String s2, int expected) {
         assertEquals(expected, LevenshteinDistance.calculate(s1, s2));
     }
+
     @Test
     void testCalculateNull() {
         assertThrows(NullPointerException.class, () -> LevenshteinDistance.calculate("null", null));
         assertThrows(NullPointerException.class, () -> LevenshteinDistance.calculate(null, "null"));
         assertThrows(NullPointerException.class, () -> LevenshteinDistance.calculate(null, null));
     }
+
     @ParameterizedTest
     @CsvSource({
             "'🐱', '🐱', 0",
