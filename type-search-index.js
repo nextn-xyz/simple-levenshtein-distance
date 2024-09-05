@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"xyz.nextn.levenshteindistance","l":"LevenshteinDistance"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"xyz.nextn.jarowinklerdistance","l":"JaroWinklerDistance"},{"p":"xyz.nextn.levenshteindistance","l":"LevenshteinDistance"},{"p":"xyz.nextn.phoneticsearch","l":"PhoneticSearch"}];updateSearchResults();

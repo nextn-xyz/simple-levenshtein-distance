@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"xyz.nextn.levenshteindistance"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"xyz.nextn.jarowinklerdistance"},{"l":"xyz.nextn.levenshteindistance"},{"l":"xyz.nextn.phoneticsearch"}];updateSearchResults();
