@@ -59,5 +59,16 @@ class LevenshteinDistanceTest {
         assertEquals(expected, LevenshteinDistance.calculate(s1, s2));
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "'1',1, 0",
+            "'1',2, 1",
+            "'1',3, 1",
+            "'1',4, 1",
+    })
+    void testCalculateNumber(String s1, int s2, int expected) {
+        assertEquals(expected, LevenshteinDistance.calculate(s1, String.valueOf(s2)));
+    }
+
 
 }
